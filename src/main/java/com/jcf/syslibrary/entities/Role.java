@@ -2,6 +2,7 @@ package com.jcf.syslibrary.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
 
 import java.util.UUID;
 
@@ -19,24 +20,7 @@ public class Role {
 
     private String description;
 
-
-    public UUID getRoleId() {
-        return roleId;
-    }
-
-    public void setRoleId(UUID roleId) {
-        this.roleId = roleId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-
+    @Getter
     public enum Values {
         BASIC(UUID.randomUUID()),
         ADMIN(UUID.randomUUID());
@@ -47,8 +31,5 @@ public class Role {
             this.roleId = roleId;
         }
 
-        public UUID getRoleId() {
-            return roleId;
-        }
     }
 }

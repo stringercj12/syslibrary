@@ -1,4 +1,4 @@
-package com.jcf.syslibrary.dtos;
+package com.jcf.syslibrary.dto;
 
 
 import java.util.List;
